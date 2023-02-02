@@ -41,8 +41,8 @@ Rayfield:Notify({
 },
 })
 Rayfield:Notify({
-   Title = "Credits",
-   Content = "Made By: Daimy and Simon",
+   Title = "Game",
+   Content = "Current Game: PSX",
    Duration = 6.5,
    Image = 4483362458,
    Actions = { -- Notification Buttons
