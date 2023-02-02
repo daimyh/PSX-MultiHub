@@ -1,0 +1,104 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/daimyh/RobloxGui/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+	Name = "Multi Hub",
+	LoadingTitle = "Multi Hub",
+	LoadingSubtitle = "by Daimy",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = nil, -- Create a custom folder for your hub/game
+		FileName = "MultiHubPSX"
+	},
+        Discord = {
+        	Enabled = true,
+        	Invite = "953sQhtZ", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "multi Hub",
+		Subtitle = "Key System",
+		Note = "Multi Hub",
+		FileName = "PSXMultiHub",
+		SaveKey = false,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "Beta"
+	}
+})
+
+Rayfield:Notify({
+   Title = "1/31/2023",
+   Content = "check discord for logs. ONLY psx supported for now.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("hi")
+      end
+   },
+},
+})
+Rayfield:Notify({
+   Title = "Credits",
+   Content = "Made By: Daimy and Simon",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Cool!",
+         Callback = function()
+         print("thx")
+      end
+   },
+},
+})
+
+-- psx
+local PsxTab = Window:CreateTab("Pet Simulator X", 11347112419) -- Title, Image
+local PsxSection = PsxTab:CreateSection("Scripts")
+local JmesButton = PsxTab:CreateButton({
+   Name = "Jmes Script",
+   Callback = function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+   end,
+})
+local TradescamButton = PsxTab:CreateButton({
+    Name = "Trade Scam Script",
+    Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Shmoly/fuck-psx/main/PsxCatLoadingScript.lua"))()
+    end,
+ })
+
+ -- admin
+ local AdminTab = Window:CreateTab("Admin", 11347112419)
+ local AdminSection = AdminTab:CreateSection("scripts")
+ local InfinityYield = AdminTab:CreateButton({
+    Name = "Infinit Yield Script",
+    Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+ })
+
+  -- other hubs
+ local HubTab = Window:CreateTab("Hubs", 11347112419)
+ local HubSection = HubTab:CreateSection("Other roblox hubs")
+ local VGhub = HubTab:CreateButton({
+     Name = "VG hub",
+     Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+     end,
+ })
+ local OwlHub = HubTab:CreateButton({
+     Name = "Owl hub",
+     Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
+     end,
+ })
+ local UnfairHub = HubTab:CreateButton({
+     Name = "unfair hub",
+     Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'))()
+     end,
+ })
