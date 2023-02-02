@@ -25,21 +25,6 @@ local Window = Rayfield:CreateWindow({
 		Key = "Beta"
 	}
 })
-
-Rayfield:Notify({
-   Title = "1/31/2023",
-   Content = "check discord for logs. ONLY psx supported for now.",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay!",
-         Callback = function()
-         print("hi")
-      end
-   },
-},
-})
 Rayfield:Notify({
    Title = "Game",
    Content = "Current Game: PSX",
